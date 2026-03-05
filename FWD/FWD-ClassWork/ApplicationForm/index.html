@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Application Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form>
+            <h2>Student Admission Form</h2>
+            <fieldset>
+                <legend>Personal Details</legend>
+
+                <label>Full Name</label>
+                <input type="text" autofocus placeholder="Enter full name" required>
+
+                <label>Email</label>
+                <input type="email" placeholder="Enter email" required>
+
+                <label>Password</label>
+                <input type="password" required>
+
+                <label>Mobile Number</label>
+                <input type="tel" pattern="[0-9]{10}" placeholder="Enter 10 digit number">
+
+                <label>Date Of Birth</label>
+                <input type="date">
+
+                <label>Age</label>
+                <input type="number" min="17" max="60">
+            </fieldset>
+           <fieldset>
+            <legend>Academic Details</legend>
+            <label>Course</label>
+            <select required>
+                <option value="">select</option>
+                <option>B.tech</option>
+                <option>BCA</option>
+                <option>MBA</option>
+                <option>M.Tech</option>
+            </select>
+            
+            <label>Branch</label>
+            <input type="text" list="branches">
+            <datalist id="branches">
+                <option>CSE</option>
+                <option>AIDS</option>
+                <option>ECE</option>
+                <option>Arts & Science</option>
+            </datalist>
+            
+            <label>Percentage</label>
+            <input type="range" min="40" max="99">
+            </fieldset> 
+            <fieldset>
+                <legend>Preferences</legend>
+                <label>Gender</label>
+                <input type="radio" name="gender">Female
+                <input type="radio" name="gender">Male
+                <br>
+                <label>Languages Known</label>
+                <input type="checkbox">Telugu
+                <input type="checkbox">English
+                <input type="checkbox">Hindi<br>
+
+                <label>Upload Photo</label>
+                <input type="file">
+
+                <label>Comments</label>
+                <textarea rows="5"></textarea>
+            
+            </fieldset>
+            <input type="image" src="applynow.png" alt="Apply now" class="btn-submit">
+            <div class="img-btn-wrapper">
+            <input type="image" src="clear.png" alt="Submit">
+            <span>Reset</span>
+            </div>
+
+        </form>
+    </body>
+</html>

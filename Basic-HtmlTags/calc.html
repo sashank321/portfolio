@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Calculator Clone</title>
+    <style>
+        :root {
+            --bg-color: #202020;
+            --display-color: #202020;
+            --btn-number-bg: #3b3b3b;
+            --btn-number-hover: #323232;
+            --btn-operator-bg: #323232;
+            --btn-operator-hover: #3b3b3b;
+            --btn-equals-bg: #76b9ed;
+            --btn-equals-hover: #69a6d4;
+            --text-white: #ffffff;
+            --text-black: #000000;
+            --border-radius: 4px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            user-select: none; /* Prevent text selection on double clicks */
+        }
+
+        body {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Main Container */
+        .calculator-window {
+            width: 330px;
+            height: 540px;
+            background-color: var(--bg-color);
+            border: 1px solid #444;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-radius: 8px; /* Rounded corners for the window */
+            overflow: hidden;
+        }
+
+        /* Title Bar */
+        .title-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 12px;
+            color: var(--text-white);
+            font-size: 12px;
+            align-items: center;
+        }
+
+        .window-controls span {
+            margin-left: 15px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* Header (Standard + Menu) */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            color: var(--text-white);
+        }
+
+        .menu-icon {
+            font-size: 18px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .mode-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        /* Display Screen */
+        .display-container {
+            flex-grow: 1;
+            padding: 0 15px 10px 15px;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .previous-operand {
+            color: #a8a8a8;
+            font-size: 14px;
+            min-height: 20px;
+            margin-bottom: 5px;
+        }
+
+        .current-operand {
+            color: var(--text-white);
+            font-size: 48px;
+            font-weight: 500;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        /* Memory Toolbar */
+        .memory-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 10px;
+            margin-bottom: 2px;
+        }
+
+        .mem-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-white);
+            font-size: 12px;
+            cursor: pointer;
+            padding: 5px;
+            flex: 1;
+        }
+
+        .mem-btn:disabled {
+            color: #666;
+            cursor: default;
+        }
+
+        .mem-btn:hover:not(:disabled) {
+            background-color: #3b3b3b;
+            border-radius: 4px;
+        }
+
+        /* Button Grid */
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+            padding: 4px;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            font-size: 16px;
+            cursor: pointer;
+            height: 48px;
+            border-radius: var(--border-radius);
+            transition: background-color 0.1s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Number Buttons */
+        .btn-num {
+            background-color: var(--btn-number-bg);
+            color: var(--text-white);
+            font-weight: 600;
+            font-size: 18px;
+        }
+        .btn-num:hover {
+            background-color: #323232; /* Slightly darker/different on hover */
+        }
+
+        /* Operator Buttons */
+        .btn-op {
+            background-color: var(--btn-operator-bg);
+            color: var(--text-white);
+            font-weight: 400;
+            font-size: 16px;
+        }
+        .btn-op:hover {
+            background-color: var(--btn-operator-hover);
+        }
+
+        /* Equals Button */
+        .btn-equal {
+            background-color: var(--btn-equals-bg);
+            color: var(--text-black);
+            font-size: 22px;
+        }
+        .btn-equal:hover {
+            background-color: var(--btn-equals-hover);
+        }
+
+        /* Icons styling within buttons */
+        .btn-op sub {
+            font-size: 10px;
+            bottom: 0;
+        }
+        
+        .btn-op sup {
+            font-size: 10px;
+        }
+
+        /* Active click state for all buttons */
+        button:active {
+            filter: brightness(0.9);
+            transform: scale(0.98);
+        }
+
+        /* Custom Backspace Icon */
+        .backspace-icon {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="calculator-window">
+        <div class="title-bar">
+            <div style="display:flex; align-items:center; gap:8px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Windows_Calculator_icon.png" width="16" alt="icon">
+                <span>Calculator</span>
+            </div>
+            <div class="window-controls">
+                <span>&#9472;</span> <span>&#9633;</span> <span>&#10005;</span> </div>
+        </div>
+
+        <div class="header">
+            <div class="menu-icon">&#9776;</div>
+            <div class="mode-title">Standard</div>
+            <div style="margin-left: auto; font-size: 18px;">&#8635;</div> </div>
+
+        <div class="display-container">
+            <div class="previous-operand" id="previous-operand"></div>
+            <div class="current-operand" id="current-operand">0</div>
+        </div>
+
+        <div class="memory-bar">
+            <button class="mem-btn" disabled>MC</button>
+            <button class="mem-btn" disabled>MR</button>
+            <button class="mem-btn">M+</button>
+            <button class="mem-btn">M-</button>
+            <button class="mem-btn">MS</button>
+            <button class="mem-btn" disabled>M&#709;</button>
+        </div>
+
+        <div class="keypad">
+            <button class="btn-op" onclick="chooseOperation('%')">%</button>
+            <button class="btn-op" onclick="clearEntry()">CE</button>
+            <button class="btn-op" onclick="clearAll()">C</button>
+            <button class="btn-op" onclick="deleteNumber()">
+                <svg class="backspace-icon" viewBox="0 0 24 24">
+                    <path d="M20 5H9l-7 7 7 7h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"></path>
+                    <line x1="18" y1="9" x2="12" y2="15"></line>
+                    <line x1="12" y1="9" x2="18" y2="15"></line>
+                </svg>
+            </button>
+
+            <button class="btn-op" onclick="calculateSpecial('1/x')"><sup>1</sup>&frasl;<sub>x</sub></button>
+            <button class="btn-op" onclick="calculateSpecial('sqr')">x<sup>2</sup></button>
+            <button class="btn-op" onclick="calculateSpecial('sqrt')"><sup>2</sup>&#8730;x</button>
+            <button class="btn-op" onclick="chooseOperation('/')">&#247;</button>
+
+            <button class="btn-num" onclick="appendNumber('7')">7</button>
+            <button class="btn-num" onclick="appendNumber('8')">8</button>
+            <button class="btn-num" onclick="appendNumber('9')">9</button>
+            <button class="btn-op" onclick="chooseOperation('*')">&#215;</button>
+
+            <button class="btn-num" onclick="appendNumber('4')">4</button>
+            <button class="btn-num" onclick="appendNumber('5')">5</button>
+            <button class="btn-num" onclick="appendNumber('6')">6</button>
+            <button class="btn-op" onclick="chooseOperation('-')">&#8722;</button>
+
+            <button class="btn-num" onclick="appendNumber('1')">1</button>
+            <button class="btn-num" onclick="appendNumber('2')">2</button>
+            <button class="btn-num" onclick="appendNumber('3')">3</button>
+            <button class="btn-op" onclick="chooseOperation('+')">&#43;</button>
+
+            <button class="btn-num" onclick="negateNumber()">+/-</button>
+            <button class="btn-num" onclick="appendNumber('0')">0</button>
+            <button class="btn-num" onclick="appendNumber('.')">.</button>
+            <button class="btn-equal" onclick="compute()">&#61;</button>
+        </div>
+    </div>
+
+    <script>
+        // State variables
+        let currentOperand = '0';
+        let previousOperand = '';
+        let operation = undefined;
+        let shouldResetScreen = false;
+
+        const currentOperandTextElement = document.getElementById('current-operand');
+        const previousOperandTextElement = document.getElementById('previous-operand');
+
+        function updateDisplay() {
+            currentOperandTextElement.innerText = formatNumber(currentOperand);
+            if (operation != null) {
+                // Display the math symbol properly
+                let displayOp = operation;
+                if(operation === '*') displayOp = '×';
+                if(operation === '/') displayOp = '÷';
+                if(operation === '-') displayOp = '−'; // Minus sign
+                
+                previousOperandTextElement.innerText = `${formatNumber(previousOperand)} ${displayOp}`;
+            } else {
+                previousOperandTextElement.innerText = '';
+            }
+        }
+
+        // Helper to add commas to numbers
+        function formatNumber(number) {
+            if (number === 'Error') return number;
+            const stringNumber = number.toString();
+            const integerDigits = parseFloat(stringNumber.split('.')[0]);
+            const decimalDigits = stringNumber.split('.')[1];
+            
+            let integerDisplay;
+            if (isNaN(integerDigits)) {
+                integerDisplay = '';
+            } else {
+                integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 });
+            }
+            
+            if (decimalDigits != null) {
+                return `${integerDisplay}.${decimalDigits}`;
+            } else {
+                return integerDisplay || '0';
+            }
+        }
+
+        function appendNumber(number) {
+            if (currentOperand === '0' && number !== '.') {
+                currentOperand = '';
+            }
+            if (shouldResetScreen) {
+                currentOperand = '';
+                shouldResetScreen = false;
+            }
+            if (number === '.' && currentOperand.includes('.')) return;
+            // Prevent too many digits
+            if (currentOperand.length > 15) return;
+            
+            currentOperand = currentOperand.toString() + number.toString();
+            updateDisplay();
+        }
+
+        function chooseOperation(op) {
+            if (currentOperand === '') return;
+            if (previousOperand !== '') {
+                compute();
+            }
+            operation = op;
+            previousOperand = currentOperand;
+            shouldResetScreen = true;
+            updateDisplay();
+        }
+
+        function compute() {
+            let computation;
+            const prev = parseFloat(previousOperand);
+            const current = parseFloat(currentOperand);
+            if (isNaN(prev) || isNaN(current)) return;
+            
+            switch (operation) {
+                case '+':
+                    computation = prev + current;
+                    break;
+                case '-':
+                    computation = prev - current;
+                    break;
+                case '*':
+                    computation = prev * current;
+                    break;
+                case '/':
+                    computation = prev / current;
+                    break;
+                case '%':
+                    // Modulo logic varies, but standard calc treats x % y differently
+                    // Standard Windows calc behavior for "50 + 10 %" is "55" (50 + 10% of 50).
+                    // For this simple implementation, we will treat it as standard division remainder or percentage of.
+                    // Let's stick to standard math % behavior just for operator logic, 
+                    // though the button on the UI handles single operand %.
+                    // If we arrived here via the equals button from a standard operation:
+                    computation = prev; 
+                    break;
+                default:
+                    return;
+            }
+            
+            currentOperand = computation;
+            operation = undefined;
+            previousOperand = '';
+            shouldResetScreen = true;
+            updateDisplay();
+        }
+
+        // Handle single operand immediate calculations (%, 1/x, x^2, sqrt)
+        function calculateSpecial(type) {
+            let current = parseFloat(currentOperand);
+            if (isNaN(current)) return;
+            
+            let newValue;
+            if (type === '1/x') {
+                newValue = 1 / current;
+            } else if (type === 'sqr') {
+                newValue = current * current;
+            } else if (type === 'sqrt') {
+                newValue = Math.sqrt(current);
+            } else if (type === '%') {
+                // In standard mode, % behaves immediately on the current number
+                newValue = current / 100;
+            }
+            
+            currentOperand = newValue;
+            shouldResetScreen = true;
+            updateDisplay();
+        }
+
+        function negateNumber() {
+            if (currentOperand === '0') return;
+            currentOperand = currentOperand * -1;
+            updateDisplay();
+        }
+
+        function clearAll() {
+            currentOperand = '0';
+            previousOperand = '';
+            operation = undefined;
+            updateDisplay();
+        }
+
+        function clearEntry() {
+            currentOperand = '0';
+            updateDisplay();
+        }
+
+        function deleteNumber() {
+            if (shouldResetScreen) return;
+            if (currentOperand === '0') return;
+            
+            currentOperand = currentOperand.toString().slice(0, -1);
+            if (currentOperand === '' || currentOperand === '-') {
+                currentOperand = '0';
+            }
+            updateDisplay();
+        }
+    </script>
+</body>
+</html>

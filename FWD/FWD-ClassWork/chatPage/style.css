@@ -1,0 +1,52 @@
+
+    body {
+        background: #f2f2f2;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .chat-container {
+        width: 350px;
+        background: #111;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .chat-header {
+        background: #000;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .chat-body {
+        background: url("https://i.imgur.com/8KQe4Zx.png");
+        padding: 15px;
+    }
+
+    .message {
+        max-width: 80%;
+        padding: 10px 15px;
+        border-radius: 20px;
+        margin-bottom: 12px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .left {
+        background: #6c7a89;
+        color: white;
+        border-bottom-left-radius: 0;
+    }
+
+    .right {
+        background: #29b6f6;
+        color: white;
+        margin-left: auto;
+        border-bottom-right-radius: 0;
+    }

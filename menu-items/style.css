@@ -1,0 +1,34 @@
+.body-background{
+    background-image: url("image-bg.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+.main-container
+{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(189, 229, 216);
+    border-radius: 25px;
+    margin: 20px;
+    max-width: 95%;
+    border: 5px;
+    justify-content: center;
+}
+.image-box
+{
+    height: 150px;
+    width: 150px;
+    padding: 20px;
+    border-radius: 30px;
+}
+h1{
+    font-family: Roboto;
+    color: dark blue;
+    text-align: center;
+}
+.root-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}

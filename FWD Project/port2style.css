@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    line-height: 1.6;
+}
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: darkslategray;
+}
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid cyan;
+    margin-bottom: 20px;
+    animation: fade 2s ease infinite;
+}
+.hero h1 {
+    margin: 10px 0;
+    font-size: 32px;
+    animation: slide 2s ease infinite;
+}
+.hero p {
+    color: lightgray;
+    margin-bottom: 20px;
+    animation: slide 2s ease infinite;
+}
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: cyan;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: white;
+}
+nav {
+    text-align: center;
+    padding: 15px 0;
+    background-color: black;
+    border-bottom: 1px solid gray;
+}
+nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: cyan;
+}
+.section {
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 0 20px;
+    animation: bounce 2s ease infinite;
+}
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    border-left: 5px solid cyan;
+    padding-left: 10px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+.card {
+    background-color: darkslategray;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid gray;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    border-color: cyan;
+}
+.project-card {
+    background-color: darkslategray;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid gray;
+    transition: 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: cyan;
+}
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: black;
+    color: gray;
+    font-size: 14px;
+}
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slide {
+    from { transform: translateX(-15px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+@keyframes bounce{
+        0%{transform: translateY(0px);}
+        50%{transform: translateY(-20px);}
+        100%{transform: translateY(0px);}
+}

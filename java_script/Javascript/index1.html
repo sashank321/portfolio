@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counter</title>
+
+<style>
+body{
+    background: linear-gradient(to top,rgb(255, 255, 255),rgb(255, 0, 255));
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+h1{
+    color: rgb(0, 229, 255);
+    text-align: center;
+    font-family: 'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+label{
+    font-size: 90px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+.btn{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* button style */
+button{
+    height: 35px;
+    width: 90px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: skyblue;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Counter</h1>
+
+<label id="number">0</label>
+
+<div class="btn">
+    <button id="raise">Raise</button>
+    <button id="clear">Clear</button>
+    <button id="down">Down</button>
+</div>
+<p id="message"></p>
+
+<script>
+const labelValue = document.getElementById("number");
+const raiseBtn = document.getElementById("raise");
+const clearBtn = document.getElementById("clear");
+const downBtn = document.getElementById("down");
+const resultText= document.getElementById("message");
+let count = 0;
+
+raiseBtn.onclick = function(){
+    count++;
+    labelValue.textContent = count;
+    resultText.textContent = "Counter Incrementation";
+    resultText.style.color = "cyan";
+    resultText.style.fontWeight = "bold";
+    resultText.style.fontSize = "40px";
+    resultText.style.textAlign = "center";
+}
+
+downBtn.onclick = function(){
+    count--;
+    labelValue.textContent = count;
+    resultText.textContent = "Counter Decrementation";
+    resultText.style.color = "cyan";
+    resultText.style.fontWeight = "bold";
+    resultText.style.fontSize = "40px";
+    resultText.style.textAlign = "center";
+}
+
+clearBtn.onclick = function(){
+    count = 0;
+    labelValue.textContent = count;
+    resultText.textContent = "Counter Cleared";
+    resultText.style.color = "cyan";
+    resultText.style.fontWeight = "bold";
+    resultText.style.fontSize = "40px";
+    resultText.style.textAlign = "center";
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+.body-background{
+    align-content: center;
+    background-image: url("https://jooinn.com/images/design-7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    font-family: Roboto;
+}
+.container{
+    border-radius:25 px;
+    text-align: center;
+    background-color: aliceblue;
+    width: 75vw;
+    padding: 20px;
+    border-style:solid ;
+    border-color: rgb(0, 0, 0);
+    margin: 20xuuu0px;
+
+}

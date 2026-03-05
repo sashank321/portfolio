@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <style>
+        body{
+            text-align: center;
+            margin-top: 100px;
+            font-family: Arial;
+            background: linear-gradient(to right, yellow, green,blue);
+        }
+        input{
+            padding: 8px;
+            margin: 5px;
+            width: 150px;
+        }
+        button{
+            padding: 8px 15px;
+            margin: 5px;
+        }
+        h2{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Arithmetic Calculator</h1>
+
+    <input type="number" id="num1" placeholder="Enter First Number"><br>
+    <input type="number" id="num2" placeholder="Enter Second Number"><br>
+
+    <button onclick="add()">+</button>
+    <button onclick="subtract()">-</button>
+    <button onclick="multiply()">*</button>
+    <button onclick="divide()">/</button>
+
+    <h2 id="result"></h2>
+
+<script>
+function add() {
+    let result = parseInt(num1.value) + parseInt(num2.value);
+    document.getElementById('result').textContent = "Result: " + result;
+}
+function subtract() {
+    let result = parseInt(num1.value) - parseInt(num2.value);
+    document.getElementById('result').textContent = "Result: " + result;
+}
+function multiply() {
+    let result = parseInt(num1.value) * parseInt(num2.value);
+    document.getElementById('result').textContent = "Result: " + result;
+}
+function divide() {
+    if (parseInt(num2.value) === 0) {
+        document.getElementById('result').textContent = "Error: Division by zero";
+    } else {
+        let result = parseInt(num1.value) / parseInt(num2.value);
+        document.getElementById('result').textContent = "Result: " + result;
+    }
+}
+
+</script>
+</body>
+</html>

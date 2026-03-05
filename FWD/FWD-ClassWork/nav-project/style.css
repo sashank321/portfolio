@@ -1,0 +1,24 @@
+h2{
+    font-size: 32px;
+}
+p,li{
+    font-size: 25px;
+}
+.body-background
+{
+    background-image: url(galaxy.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family:"Roboto";
+    color:rgb(246, 244, 242);
+}
+.nav-bar
+{
+    background-color: rgb(196,230,230);
+    width:fit-content;
+    padding: 25px;
+    border-radius: 30px;
+    color:green;
+    font-weight: bold;
+}

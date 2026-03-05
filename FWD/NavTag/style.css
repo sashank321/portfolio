@@ -1,0 +1,32 @@
+.bodybackground{
+    background-image: url("https://images.panda.org/assets/images/pages/welcome/orangutan_1600x1000_279157.jpg");
+    text-align: center;
+    padding: auto;
+    text-shadow: 0ch;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgb(255, 255, 255);
+}
+p,li{
+    font-size: 20px;
+    text-align: center;
+}
+h2{
+    font-size: 32px;
+
+}
+h1{
+    font-size: 40px;
+    font-family: 'Consolas', monospace;
+    font-weight: bold;
+    
+}
+nav{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}

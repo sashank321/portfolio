@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passport Application Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f6ff;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1a237e;
+        }
+
+        form {
+            width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        fieldset {
+            border: 2px solid #3f51b5;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #3f51b5;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type=radio],
+        input[type=checkbox] {
+            width: auto;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .btn-group {
+            text-align: center;
+        }
+
+        input[type=submit], input[type=reset] {
+            width: 150px;
+            background: #3f51b5;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover,
+        input[type=reset]:hover {
+            background: #1a237e;
+        }
+    </style>
+
+</head>
+<body>
+
+<h2>Passport Application Form</h2>
+
+<form>
+
+<fieldset>
+<legend>Personal Details</legend>
+
+<label>Full Name</label>
+<input type="text" placeholder="Enter your full name">
+
+<label>Date of Birth</label>
+<input type="date">
+
+<label>Gender</label><br>
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender"> Female
+<input type="radio" name="gender"> Other<br><br>
+
+<label>Marital Status</label>
+<select>
+    <option>Select</option>
+    <option>Single</option>
+    <option>Married</option>
+</select>
+
+</fieldset>
+
+<fieldset>
+<legend>Contact Details</legend>
+
+<label>Email</label>
+<input type="email">
+
+<label>Mobile Number</label>
+<input type="tel">
+
+<label>Address</label>
+<textarea rows="4"></textarea>
+
+</fieldset>
+
+<fieldset>
+<legend>Passport Details</legend>
+
+<label>Type of Application</label><br>
+<input type="radio" name="type"> New Passport
+<input type="radio" name="type"> Reissue<br><br>
+
+<label>Passport Booklet Type</label><br>
+<input type="checkbox"> 36 Pages
+<input type="checkbox"> 60 Pages<br><br>
+
+<label>Upload Proof</label>
+<input type="file">
+
+</fieldset>
+
+<fieldset>
+<legend>Declaration</legend>
+<input type="checkbox"> I hereby declare that the information given is true.
+
+</fieldset>
+
+<div class="btn-group">
+    <input type="submit" value="Submit">
+    <input type="reset" value="Clear">
+</div>
+
+</form>
+
+</body>
+</html>

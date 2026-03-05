@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 40px;
+    background-color: #2980b9;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.nav-logo {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+}
+
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+    background-color: #2980b9;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 3px solid #1a6999;
+}
+
+.hero-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.highlight {
+    color: #ffd700;
+}
+
+.hero-sub {
+    font-size: 14px;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.hero-desc {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-bottom: 22px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: white;
+    color: #2980b9;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+
+/* ---------- CONTAINER ---------- */
+
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* ---------- CARDS ---------- */
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 25px 28px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #2980b9;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.7;
+}
+
+/* ---------- EDUCATION ---------- */
+
+.edu-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+
+.edu-icon {
+    font-size: 22px;
+}
+
+.edu-info h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.edu-info p {
+    font-size: 13px;
+    color: #777777;
+}
+
+/* ---------- SKILLS ---------- */
+
+.skills-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555555;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background-color: #ddeeff;
+    color: #1a6999;
+    font-size: 13px;
+    padding: 5px 14px;
+    border-radius: 4px;
+    border: 1px solid #aaccee;
+}
+
+.skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.skill-icon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    background-color: #f9f9f9;
+    text-decoration: none;
+    color: #333333;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.skill-icon-card img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+
+
+/* ---------- HOBBIES ---------- */
+
+.hobbies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hobby-item {
+    background-color: #eaf9f0;
+    border: 1px solid #b2dfcb;
+    color: #2e7d52;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* ---------- PROJECT CARD ---------- */
+
+.project-card {
+    background-color: #f9f9f9;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    padding: 18px 20px;
+}
+
+.project-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.project-tag {
+    display: inline-block;
+    background-color: #ddeeff;
+    color: #1a6999;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #555555;
+}
+
+.contact-icon {
+    font-size: 18px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #888888;
+    border-top: 1px solid #dddddd;
+    margin-top: 10px;
+}

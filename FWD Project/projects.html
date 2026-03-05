@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | J Sashank</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="portstyle.css">
+    <style>
+        /* extra styles for this page */
+
+        .projects-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: #2980b9;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 7px 14px;
+            border: 1px solid #aaccee;
+            border-radius: 5px;
+            background-color: #ddeeff;
+            white-space: nowrap;
+        }
+
+
+
+        .projects-header h1 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333333;
+        }
+
+        .filter-note {
+            font-size: 13px;
+            color: #2980b9;
+            background-color: #ddeeff;
+            border: 1px solid #aaccee;
+            border-radius: 5px;
+            padding: 8px 14px;
+            margin-bottom: 18px;
+            display: none;
+        }
+
+        /* filter tab buttons */
+        .filter-tabs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .filter-btn {
+            padding: 6px 16px;
+            border-radius: 4px;
+            border: 1px solid #cccccc;
+            background-color: #ffffff;
+            font-size: 13px;
+            font-weight: 500;
+            color: #555555;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .filter-btn.active {
+            background-color: #2980b9;
+            color: white;
+            border-color: #2980b9;
+        }
+
+        /* project grid */
+        .proj-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 14px;
+        }
+
+        .proj-card {
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            padding: 18px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+
+
+        .card-tag {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            padding: 3px 9px;
+            border-radius: 3px;
+            width: fit-content;
+        }
+
+        .tag-html {
+            background-color: #fff1e6;
+            color: #c05c10;
+        }
+
+        .tag-css {
+            background-color: #e8f0fb;
+            color: #3a6bb5;
+        }
+
+        .tag-js {
+            background-color: #fefbe6;
+            color: #8a7000;
+        }
+
+        .proj-card h3 {
+            font-size: 14px;
+            font-weight: 500;
+            color: #333333;
+            line-height: 1.5;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: #2980b9;
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR (same as portfolio) -->
+    <nav class="navbar">
+        <div class="nav-logo">J Sashank</div>
+        <ul class="nav-links">
+            <li><a href="portfolio.html#about">About</a></li>
+            <li><a href="portfolio.html#education">Education</a></li>
+            <li><a href="portfolio.html#skills">Skills</a></li>
+            <li><a href="portfolio.html#hobbies">Hobbies</a></li>
+            <li><a href="portfolio.html#projects">Patents</a></li>
+            <li><a href="portfolio.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <div class="card">
+            <div class="projects-header">
+                <a href="portfolio.html" class="back-btn">&#8592; Back</a>
+                <h1 id="page-title">My Projects</h1>
+            </div>
+
+            <p class="filter-note" id="filter-note"></p>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs" id="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="html">HTML</button>
+                <button class="filter-btn" data-filter="css">CSS</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="proj-grid">
+
+                <!-- 1 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Student Application Form</h3>
+                    <a href="../../ApplicationForm/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 2 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Passport Application Form</h3>
+                    <a href="../../PassportForm/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 3 -->
+                <div class="proj-card" data-tag="javascript">
+                    <span class="card-tag tag-js">JavaScript</span>
+                    <h3>Login Page</h3>
+                    <a href="../../Login-page/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 4 -->
+                <div class="proj-card" data-tag="css">
+                    <span class="card-tag tag-css">CSS</span>
+                    <h3>Food Order Page</h3>
+                    <a href="../../food-order-page/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 5 -->
+                <div class="proj-card" data-tag="css">
+                    <span class="card-tag tag-css">CSS</span>
+                    <h3>Chat UI</h3>
+                    <a href="../../chatPage/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 6 -->
+                <div class="proj-card" data-tag="css">
+                    <span class="card-tag tag-css">CSS</span>
+                    <h3>Motivational Card</h3>
+                    <a href="../../card1/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 7 -->
+                <div class="proj-card" data-tag="css">
+                    <span class="card-tag tag-css">CSS</span>
+                    <h3>Menu Items</h3>
+                    <a href="../../menu-items/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 8 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Semantic Tags &amp; Navigation</h3>
+                    <a href="../../nav-project/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 9 -->
+                <div class="proj-card" data-tag="css">
+                    <span class="card-tag tag-css">CSS</span>
+                    <h3>KLH University CSS Demo</h3>
+                    <a href="../../KLH-CSS-intro/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 10 -->
+                <div class="proj-card" data-tag="css">
+                    <span class="card-tag tag-css">CSS</span>
+                    <h3>KLH Department Cards</h3>
+                    <a href="../../StylingDemo/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 11 -->
+                <div class="proj-card" data-tag="javascript">
+                    <span class="card-tag tag-js">JavaScript</span>
+                    <h3>Arithmetic Calculator</h3>
+                    <a href="../../java_script/Arithematic_calc/index.html" target="_blank" class="card-link">Open
+                        &rarr;</a>
+                </div>
+
+                <!-- 12 -->
+                <div class="proj-card" data-tag="javascript">
+                    <span class="card-tag tag-js">JavaScript</span>
+                    <h3>Simple Interest Calculator</h3>
+                    <a href="../../java_script/SimpleIntrestCalculator.html" target="_blank" class="card-link">Open
+                        &rarr;</a>
+                </div>
+
+                <!-- 13 -->
+                <div class="proj-card" data-tag="javascript">
+                    <span class="card-tag tag-js">JavaScript</span>
+                    <h3>JS Image Enhancer</h3>
+                    <a href="../../java_script/js-ImageEnhansor/index.html" target="_blank" class="card-link">Open
+                        &rarr;</a>
+                </div>
+
+                <!-- 14 -->
+                <div class="proj-card" data-tag="javascript">
+                    <span class="card-tag tag-js">JavaScript</span>
+                    <h3>Background Colour Changer</h3>
+                    <a href="../../java_script/changeBackground colour.html" target="_blank" class="card-link">Open
+                        &rarr;</a>
+                </div>
+
+                <!-- 15 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Lists &amp; Images Project</h3>
+                    <a href="../../List_images_project/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 16 -->
+                <div class="proj-card" data-tag="css">
+                    <span class="card-tag tag-css">CSS</span>
+                    <h3>CSS Exercise</h3>
+                    <a href="../../CSS Excercise/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 17 -->
+                <div class="proj-card" data-tag="css">
+                    <span class="card-tag tag-css">CSS</span>
+                    <h3>CSS Demo</h3>
+                    <a href="../../CSS-demo/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 18 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Div, Image &amp; Anchor Demo</h3>
+                    <a href="../../div-img-a/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 19 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Table &amp; List Project</h3>
+                    <a href="../../table-list-project/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 20 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Table Demo</h3>
+                    <a href="../../table_demo/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 21 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Form Creation</h3>
+                    <a href="../../form-creation/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 22 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Media Tags Demo</h3>
+                    <a href="../../Media Tags/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 23 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Basic HTML Tags</h3>
+                    <a href="../../Basic-HtmlTags/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 24 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>HTML Lists</h3>
+                    <a href="../../lists/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 25 -->
+                <div class="proj-card" data-tag="css">
+                    <span class="card-tag tag-css">CSS</span>
+                    <h3>Motivation Card v2</h3>
+                    <a href="../../FWD/CSS.1/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 26 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>First Web Page</h3>
+                    <a href="../../FWD/FirstPage/Index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 27 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Personal Profile Mini Project</h3>
+                    <a href="../../FWD/FirstPage/MiniProjectUsingHTML.html" target="_blank" class="card-link">Open
+                        &rarr;</a>
+                </div>
+
+                <!-- 28 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Temperature &amp; Weight Conversion</h3>
+                    <a href="../../FWD/FirstPage/MiniProjectUsingHTML2.html" target="_blank" class="card-link">Open
+                        &rarr;</a>
+                </div>
+
+                <!-- 29 -->
+                <div class="proj-card" data-tag="css">
+                    <span class="card-tag tag-css">CSS</span>
+                    <h3>KLU University Homepage</h3>
+                    <a href="../../FWD/KLU_Homepage/Index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 30 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Nav Tag Demo</h3>
+                    <a href="../../FWD/NavTag/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 31 -->
+                <div class="proj-card" data-tag="css">
+                    <span class="card-tag tag-css">CSS</span>
+                    <h3>KL Mart Store Page</h3>
+                    <a href="../../FWD/StyleSheet/Index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 32 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Class Timetable</h3>
+                    <a href="../../FWD/TimeTable/TimeTable1.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+
+                <!-- 34 -->
+                <div class="proj-card" data-tag="css">
+                    <span class="card-tag tag-css">CSS</span>
+                    <h3>KLH Education CSS Intro</h3>
+                    <a href="../../FWD/css/first.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 35 -->
+                <div class="proj-card" data-tag="css">
+                    <span class="card-tag tag-css">CSS</span>
+                    <h3>SD Mart CSS Demo</h3>
+                    <a href="../../FWD/css.demo/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 36 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Lists, Links &amp; Images Project</h3>
+                    <a href="../../FWD/div-a-img/MiniProject1.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 37 -->
+                <div class="proj-card" data-tag="html">
+                    <span class="card-tag tag-html">HTML</span>
+                    <h3>Learn Geetha Online (Media)</h3>
+                    <a href="../../FWD/media/index.html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+                <!-- 38 -->
+                <div class="proj-card" data-tag="css">
+                    <span class="card-tag tag-css">CSS</span>
+                    <h3>Restaurant Menu (Extended)</h3>
+                    <a href="../../FWD/menu/index (1).html" target="_blank" class="card-link">Open &rarr;</a>
+                </div>
+
+            </div><!-- end .proj-grid -->
+        </div><!-- end .card -->
+
+    </div><!-- end .container -->
+
+    <footer>
+        <p>J Sashank | &copy; 2026</p>
+    </footer>
+
+    <script>
+        // Filter from URL (when clicking a skill icon from portfolio)
+        const params = new URLSearchParams(window.location.search);
+        const skill = params.get('skill');
+
+        if (skill) {
+            const filter = skill.toLowerCase();
+
+            document.title = skill + ' Projects | J Sashank';
+            document.getElementById('page-title').textContent = skill + ' Projects';
+
+            const note = document.getElementById('filter-note');
+            note.style.display = 'block';
+            note.textContent = 'Showing only ' + skill + ' projects.';
+
+            // Hide cards that don't match
+            document.querySelectorAll('.proj-card').forEach(function (card) {
+                if (card.dataset.tag !== filter) {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Highlight matching filter button
+            document.querySelectorAll('.filter-btn').forEach(function (btn) {
+                btn.classList.remove('active');
+                if (btn.dataset.filter === filter) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        // Filter buttons (tabs) click logic
+        document.querySelectorAll('.filter-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const chosen = this.dataset.filter;
+
+                // update active class
+                document.querySelectorAll('.filter-btn').forEach(function (b) {
+                    b.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                // show/hide cards
+                document.querySelectorAll('.proj-card').forEach(function (card) {
+                    if (chosen === 'all' || card.dataset.tag === chosen) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

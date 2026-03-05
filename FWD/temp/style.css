@@ -1,0 +1,32 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1236d3 0%, #35fc1b 100%);
+    text-align: center;
+    padding: 30px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+.card h3 {
+    color: #4a5bdc;
+    margin-bottom: 10px;
+}
+.card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+}
+footer {
+    color: white;
+}

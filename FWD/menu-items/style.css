@@ -1,0 +1,20 @@
+.body-background{
+    background-image: url(https://i0.wp.com/www.sujiscooking.com/wp-content/uploads/2014/11/kozhikodan-biriyani-recipe.1024x1024-2.jpg?fit=1024%2C1549&ssl=1);
+    height:100vh;
+    width:100vw;
+    background-size: cover;
+
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    background-color: aliceblue;
+    border-radius: 25px;
+    margin: 50px;
+    max-width: 500px;
+    border: 5px;
+
+}
+.image-box{
+    padding: 20px;
+}

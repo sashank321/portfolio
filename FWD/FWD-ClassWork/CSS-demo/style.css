@@ -1,0 +1,23 @@
+.body-background{
+    align-content: center;
+    background-image: url("https://cdn.pixabay.com/photo/2017/06/26/20/36/palm-2445107_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    font-family: Roboto;
+    font-size: 40px;
+    text-align: center;
+
+}
+.container{
+    background-color: lightskyblue;
+    text-align: center;
+    width: 1100px;
+    border-radius: 25px;
+    padding: 20px;
+    line-height: 10px;
+    margin: auto;
+    font-size: 55px;
+    box-shadow: 10px 10px 20px black;    
+    
+}

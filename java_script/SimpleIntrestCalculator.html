@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Interest Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 60px;
+        }
+        input {
+            padding: 8px;
+            margin: 8px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simple Interest Calculator</h1>
+
+    <input type="number" id="principal" placeholder="Enter Principal"><br>
+    <input type="number" id="rate" placeholder="Enter Rate (%)"><br>
+    <input type="number" id="time" placeholder="Enter Time (years)"><br>
+
+    <button onclick="showInterest()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function showInterest() {
+            let p = parseFloat(document.getElementById('principal').value);
+            let r = parseFloat(document.getElementById('rate').value);
+            let t = parseFloat(document.getElementById('time').value);
+            let result = (p * r * t) / 100;
+            document.getElementById('result').innerText = "Simple Interest: " + result;
+        }
+    </script>
+
+</body>
+</html>

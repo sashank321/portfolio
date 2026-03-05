@@ -1,0 +1,37 @@
+.body-background{
+    background-image: url("bg.jpg");
+    height: 100vh;
+    background-size: cover;
+    font-family: Roboto;
+}
+.main-container
+{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #f0f0f0;
+    margin: 35px auto;
+    box-shadow: 5px 5px 10px yellow;
+    border-radius: 25px;
+}
+.row-container
+{
+    display: flex;
+    flex-direction: row;
+}
+.quote
+{
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    padding: 10px;
+    
+}
+.image-box img
+{
+    width: 100%;
+    height: auto;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}

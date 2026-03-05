@@ -1,0 +1,26 @@
+ .body-background
+{
+    margin: 0;
+    background-image: url("plant-growing-from-soil.jpg");
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.quote
+{
+    max-width: 95vw;
+    font-family: Lobster;
+    font-size: 55px;
+    background-color: rgb(200, 252, 111);
+    margin: 50px;
+    height: 25vh;
+    border-radius: 25px;
+    text-align: center;
+    padding: 25px;
+    align-items: center;
+    
+} 

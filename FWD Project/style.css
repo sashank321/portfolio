@@ -1,0 +1,155 @@
+/* ---------- Global Reset ---------- */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: hsl(210, 30%, 96%);
+    color: #222;
+}
+
+/* ---------- Page Layout ---------- */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+header {
+    width: 100%;
+    background-color: hsl(118, 70%, 35%);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 38px;
+}
+
+header p {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #1f1f1f;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    background-color: #444;
+}
+
+/* ---------- Main Content ---------- */
+section {
+    flex: 1;
+    width: 100%;
+    padding: 40px;
+    background-color: white;
+}
+
+section h2, section h3 {
+    color: hsl(210, 70%, 35%);
+}
+
+/* ---------- Teachers Page ---------- */
+.teachers {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px;
+    background-color: white;
+}
+
+.card {
+    width: 240px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* ---------- Admission Form ---------- */
+form {
+    width: 420px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 9px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(40, 120, 200);
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: rgb(30, 100, 180);
+}
+
+/* ---------- Resources Table ---------- */
+table {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th {
+    background-color: hsl(210, 70%, 35%);
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    width: 100%;
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
