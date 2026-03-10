@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KLH Velocity - Formula Student Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-logo">KLH Velocity</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#car">Our Car</a></li>
+            <li><a href="#schedule">Races</a></li>
+            <li><a href="#results">Results</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">☀️</button>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">EST. 2024</div>
+            <h1>KLH <span class="accent">Velocity</span></h1>
+            <p class="hero-sub">Formula Student Racing Team</p>
+            <p class="hero-tagline">We are a group of 1st year engineering students from KLH University who build and
+                race our own go-kart.</p>
+            <div class="hero-buttons">
+                <a href="#car" class="btn btn-primary">See Our Car</a>
+                <a href="#schedule" class="btn btn-outline">Next Race →</a>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <!-- ABOUT -->
+        <section id="about" class="card fade-in">
+            <h2 class="section-title">What We Do</h2>
+            <p>
+                We started this team in our first semester because we wanted to do something hands-on.
+                Most of us are from CSE and Mechanical, and we thought it would be cool to actually build
+                something instead of just studying theory. Right now we are working on a go-kart for the
+                BAJA SAE India 2026 competition.
+            </p>
+            <p style="margin-top: 10px;">
+                We meet every Saturday at the workshop behind Block C. If you are interested in joining,
+                come talk to any of us or DM us on Instagram.
+            </p>
+            <div class="stats-row">
+                <div class="stat-box">
+                    <span class="stat-num" data-target="8">0</span>
+                    <span class="stat-label">Members</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-num" data-target="1">0</span>
+                    <span class="stat-label">Cars Built</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-num" data-target="3">0</span>
+                    <span class="stat-label">Events</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-num" data-target="0">0</span>
+                    <span class="stat-label">Breakdowns</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM MEMBERS -->
+        <section id="team" class="card fade-in">
+            <h2 class="section-title">Our Team</h2>
+            <p class="team-intro">There are 8 of us right now. Here are the main members:</p>
+
+            <div class="team-grid">
+                <div class="member-card">
+                    <div class="member-avatar" style="background-color: #e94560;">R</div>
+                    <h3>Rahul K.</h3>
+                    <p class="member-role">Team Captain</p>
+                    <p class="member-desc">Handles overall coordination and talks to sponsors</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-avatar" style="background-color: #3498db;">S</div>
+                    <h3>Sashank J.</h3>
+                    <p class="member-role">Web & Electronics</p>
+                    <p class="member-desc">Made this website and works on the dashboard display</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-avatar" style="background-color: #2ecc71;">A</div>
+                    <h3>Ananya M.</h3>
+                    <p class="member-role">Chassis Design</p>
+                    <p class="member-desc">She does all the CAD work for the frame</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-avatar" style="background-color: #f39c12;">V</div>
+                    <h3>Vikram T.</h3>
+                    <p class="member-role">Engine & Drivetrain</p>
+                    <p class="member-desc">Knows everything about engines somehow</p>
+                </div>
+                <div class="member-card">
+                    <div class="member-avatar" style="background-color: #9b59b6;">P</div>
+                    <h3>Priya D.</h3>
+                    <p class="member-role">Driver + Suspension</p>
+                    <p class="member-desc">The fastest driver we have</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR CAR -->
+        <section id="car" class="card fade-in">
+            <h2 class="section-title">Our Car — VX-01</h2>
+            <div class="car-header">
+                <p>
+                    This is our first car. We named it VX-01 (Velocity Experimental 01, sounds cool right?).
+                    It's still being built but here are the specs we are aiming for:
+                </p>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <span class="spec-icon">🏎️</span>
+                    <span class="spec-key">Type</span>
+                    <span class="spec-val">Single-seater Go-Kart</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">⚙️</span>
+                    <span class="spec-key">Engine</span>
+                    <span class="spec-val">Honda GX160 (5.5 HP)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">🛠️</span>
+                    <span class="spec-key">Frame</span>
+                    <span class="spec-val">Tubular Steel (Mild)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">⚖️</span>
+                    <span class="spec-key">Weight</span>
+                    <span class="spec-val">~120 kg target</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">💨</span>
+                    <span class="spec-key">Top Speed</span>
+                    <span class="spec-val">55-60 km/h (est.)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-icon">🛑</span>
+                    <span class="spec-key">Brakes</span>
+                    <span class="spec-val">Disc (rear)</span>
+                </div>
+            </div>
+
+            <h3 class="sub-heading">Build Progress</h3>
+            <div class="progress-track">
+                <div class="progress-step done">
+                    <div class="step-dot"></div>
+                    <div class="step-line"></div>
+                    <span>CAD Design Finalized</span>
+                </div>
+                <div class="progress-step done">
+                    <div class="step-dot"></div>
+                    <div class="step-line"></div>
+                    <span>Frame Tubes Cut</span>
+                </div>
+                <div class="progress-step done">
+                    <div class="step-dot"></div>
+                    <div class="step-line"></div>
+                    <span>Welding — Main Frame</span>
+                </div>
+                <div class="progress-step active">
+                    <div class="step-dot"></div>
+                    <div class="step-line"></div>
+                    <span>Engine Mounting</span>
+                </div>
+                <div class="progress-step pending">
+                    <div class="step-dot"></div>
+                    <div class="step-line"></div>
+                    <span>Steering Assembly</span>
+                </div>
+                <div class="progress-step pending">
+                    <div class="step-dot"></div>
+                    <div class="step-line"></div>
+                    <span>Brake System</span>
+                </div>
+                <div class="progress-step pending">
+                    <div class="step-dot"></div>
+                    <div class="step-line"></div>
+                    <span>Wiring & Dashboard</span>
+                </div>
+                <div class="progress-step pending">
+                    <div class="step-dot"></div>
+                    <span>Testing & Safety</span>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 43%;"></div>
+                </div>
+                <span class="progress-percent">43% Complete</span>
+            </div>
+        </section>
+
+        <!-- RACE SCHEDULE -->
+        <section id="schedule" class="card fade-in">
+            <h2 class="section-title">Race Schedule — 2026</h2>
+
+            <div class="race-list">
+                <div class="race-item past">
+                    <div class="race-date-block">
+                        <span class="race-month">JAN</span>
+                        <span class="race-day">15</span>
+                    </div>
+                    <div class="race-details">
+                        <h3>KLH Internal Time Trial</h3>
+                        <p>Campus Track — practice run, not an official race</p>
+                        <span class="race-badge completed">Completed</span>
+                    </div>
+                </div>
+
+                <div class="race-item next">
+                    <div class="race-date-block highlight-date">
+                        <span class="race-month">APR</span>
+                        <span class="race-day">05</span>
+                    </div>
+                    <div class="race-details">
+                        <h3>Hyderabad College Kart Championship</h3>
+                        <p>Shamshabad Karting Arena — our first real race!</p>
+                        <span class="race-badge upcoming">Next Race</span>
+                        <div class="countdown-mini" id="countdown">
+                            <div class="cd-item"><span id="cd-days">--</span><small>days</small></div>
+                            <div class="cd-item"><span id="cd-hours">--</span><small>hrs</small></div>
+                            <div class="cd-item"><span id="cd-mins">--</span><small>min</small></div>
+                            <div class="cd-item"><span id="cd-secs">--</span><small>sec</small></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="race-item future">
+                    <div class="race-date-block">
+                        <span class="race-month">JUL</span>
+                        <span class="race-day">20</span>
+                    </div>
+                    <div class="race-details">
+                        <h3>BAJA SAE India 2026 (South Zone)</h3>
+                        <p>Pithampur, Indore — the big one we are preparing for</p>
+                        <span class="race-badge registered">Registered</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESULTS -->
+        <section id="results" class="card fade-in">
+            <h2 class="section-title">Our Scores So Far</h2>
+            <p>We have only done one event so far, but here's how it went:</p>
+
+            <div class="result-block">
+                <h3>KLH Internal Time Trial — Jan 15, 2026</h3>
+                <div class="table-wrapper">
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>Driver</th>
+                                <th>Lap 1</th>
+                                <th>Lap 2</th>
+                                <th>Lap 3</th>
+                                <th>Best</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="driver-dot" style="background:#9b59b6;"></span> Priya D.</td>
+                                <td>1:42.3</td>
+                                <td>1:38.7</td>
+                                <td>1:36.1</td>
+                                <td class="best-time">1:36.1</td>
+                            </tr>
+                            <tr>
+                                <td><span class="driver-dot" style="background:#e94560;"></span> Rahul K.</td>
+                                <td>1:48.9</td>
+                                <td>1:45.2</td>
+                                <td>1:43.8</td>
+                                <td class="best-time">1:43.8</td>
+                            </tr>
+                            <tr>
+                                <td><span class="driver-dot" style="background:#f39c12;"></span> Vikram T.</td>
+                                <td>1:51.0</td>
+                                <td>1:49.4</td>
+                                <td>1:47.6</td>
+                                <td class="best-time">1:47.6</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="result-note">* This was on a temporary track behind the campus. Lap distance was about 800m.
+                </p>
+            </div>
+
+            <div class="season-summary">
+                <h3>Season Summary</h3>
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <span class="summary-num">1</span>
+                        <span class="summary-label">Event Done</span>
+                    </div>
+                    <div class="summary-card">
+                        <span class="summary-num">3</span>
+                        <span class="summary-label">Drivers Tested</span>
+                    </div>
+                    <div class="summary-card">
+                        <span class="summary-num">1:36.1</span>
+                        <span class="summary-label">Best Lap Time</span>
+                    </div>
+                    <div class="summary-card">
+                        <span class="summary-num">0</span>
+                        <span class="summary-label">Breakdowns</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="card fade-in">
+            <h2 class="section-title">Workshop Gallery</h2>
+            <p style="margin-bottom: 14px;">Some photos from our build sessions (click to zoom):</p>
+            <div class="gallery">
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="racing_logo.png" alt="Our Logo">
+                    <div class="gallery-caption">Team Logo Design</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="team_photo.png" alt="Team Photo">
+                    <div class="gallery-caption">Team at Workshop</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="driver1.png" alt="Driver 1">
+                    <div class="gallery-caption">Rahul Testing</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="driver2.png" alt="Driver 2">
+                    <div class="gallery-caption">Priya Race Day</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="card fade-in">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <span class="contact-icon">📧</span>
+                    <a href="mailto:velocity.team@klh.edu.in">velocity.team@klh.edu.in</a>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-icon">📸</span>
+                    <a href="https://instagram.com" target="_blank">@klh_velocity</a>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-icon">📍</span>
+                    <span>Workshop behind Block C, KLH Aziz Nagar</span>
+                </div>
+            </div>
+            <p class="credits">Website made by Sashank J. — still learning HTML/CSS so please excuse any bugs :)</p>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>KLH Velocity Racing Team | &copy; 2026</p>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Zoomed">
+    </div>
+
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+    <script>
+        // ===== COUNTDOWN TIMER =====
+        const raceDate = new Date("April 5, 2026 14:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const diff = raceDate - now;
+
+            if (diff <= 0) {
+                document.getElementById("cd-days").textContent = "0";
+                document.getElementById("cd-hours").textContent = "0";
+                document.getElementById("cd-mins").textContent = "0";
+                document.getElementById("cd-secs").textContent = "0";
+                return;
+            }
+
+            document.getElementById("cd-days").textContent = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById("cd-hours").textContent = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("cd-mins").textContent = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("cd-secs").textContent = Math.floor((diff % (1000 * 60)) / 1000);
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // ===== SCROLL ANIMATIONS =====
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(function (el) {
+            observer.observe(el);
+        });
+
+        // ===== NUMBER COUNTER ANIMATION =====
+        const statNums = document.querySelectorAll('.stat-num');
+
+        const counterObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-target'));
+                    let current = 0;
+                    const increment = Math.max(1, Math.floor(target / 30));
+                    const timer = setInterval(function () {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        el.textContent = current;
+                    }, 40);
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statNums.forEach(function (el) {
+            counterObserver.observe(el);
+        });
+
+        // ===== DARK / LIGHT THEME =====
+        const themeBtn = document.getElementById('themeToggle');
+        let isDark = true;
+
+        themeBtn.addEventListener('click', function () {
+            isDark = !isDark;
+            document.body.classList.toggle('light-mode');
+            themeBtn.textContent = isDark ? '☀️' : '🌙';
+        });
+
+        // ===== LIGHTBOX =====
+        function openLightbox(el) {
+            const img = el.querySelector('img');
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox').classList.add('open');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('open');
+        }
+
+        // ===== SCROLL TO TOP BUTTON =====
+        window.addEventListener('scroll', function () {
+            const btn = document.getElementById('scrollTop');
+            if (window.scrollY > 400) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        });
+
+        // ===== NAVBAR SHRINK ON SCROLL =====
+        window.addEventListener('scroll', function () {
+            const nav = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
