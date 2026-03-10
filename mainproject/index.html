@@ -386,8 +386,6 @@
         <img id="lightbox-img" src="" alt="Zoomed">
     </div>
 
-    <!-- SCROLL TO TOP -->
-    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
     <script>
         // ===== COUNTDOWN TIMER =====
@@ -477,15 +475,7 @@
             document.getElementById('lightbox').classList.remove('open');
         }
 
-        // ===== SCROLL TO TOP BUTTON =====
-        window.addEventListener('scroll', function () {
-            const btn = document.getElementById('scrollTop');
-            if (window.scrollY > 400) {
-                btn.classList.add('show');
-            } else {
-                btn.classList.remove('show');
-            }
-        });
+
 
         // ===== NAVBAR SHRINK ON SCROLL =====
         window.addEventListener('scroll', function () {
