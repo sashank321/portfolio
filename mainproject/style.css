@@ -38,7 +38,7 @@ body.light-mode .nav-links a {
 }
 
 body.light-mode .hero {
-    background: linear-gradient(160deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background: #16213e;
 }
 
 body.light-mode .card {
@@ -193,7 +193,7 @@ body.light-mode .scroll-top {
 /* ========== HERO ========== */
 
 .hero {
-    background: linear-gradient(160deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background: #16213e;
     color: white;
     text-align: center;
     padding: 70px 20px 50px;
@@ -616,7 +616,7 @@ body.light-mode .scroll-top {
 
 .progress-bar-fill {
     height: 100%;
-    background: linear-gradient(90deg, #27ae60, #2ecc71);
+    background: #27ae60;
     border-radius: 4px;
     transition: width 1s ease;
 }
@@ -833,7 +833,7 @@ body.light-mode .scroll-top {
 .season-summary {
     margin-top: 22px;
     padding: 20px;
-    background: linear-gradient(135deg, #16162a, #1e1e35);
+    background: #16162a;
     border-radius: 10px;
     border: 1px solid #2a2a3e;
 }
