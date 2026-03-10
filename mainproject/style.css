@@ -30,7 +30,7 @@ body.light-mode .navbar {
 }
 
 body.light-mode .nav-logo {
-    color: #e94560;
+    color: #FF2800;
 }
 
 body.light-mode .nav-links a {
@@ -138,7 +138,7 @@ body.light-mode .scroll-top {
 .nav-logo {
     font-size: 18px;
     font-weight: 700;
-    color: #e94560;
+    color: #FF2800;
     letter-spacing: 0.5px;
 }
 
@@ -158,7 +158,7 @@ body.light-mode .scroll-top {
 }
 
 .nav-links a:hover {
-    color: #e94560;
+    color: #FF2800;
 }
 
 .nav-links a::after {
@@ -168,7 +168,7 @@ body.light-mode .scroll-top {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #e94560;
+    background-color: #FF2800;
     transition: width 0.3s;
 }
 
@@ -187,7 +187,7 @@ body.light-mode .scroll-top {
 }
 
 .theme-toggle:hover {
-    border-color: #e94560;
+    border-color: #FF2800;
 }
 
 /* ========== HERO ========== */
@@ -205,8 +205,8 @@ body.light-mode .scroll-top {
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 2px;
-    color: #e94560;
-    border: 1px solid #e94560;
+    color: #FF2800;
+    border: 1px solid #FF2800;
     padding: 4px 14px;
     border-radius: 20px;
     margin-bottom: 16px;
@@ -219,7 +219,7 @@ body.light-mode .scroll-top {
 }
 
 .accent {
-    color: #e94560;
+    color: #FF2800;
 }
 
 .hero-sub {
@@ -261,7 +261,7 @@ body.light-mode .scroll-top {
 }
 
 .btn-primary {
-    background-color: #e94560;
+    background-color: #FF2800;
     color: white;
 }
 
@@ -276,8 +276,8 @@ body.light-mode .scroll-top {
 }
 
 .btn-outline:hover {
-    border-color: #e94560;
-    color: #e94560;
+    border-color: #FF2800;
+    color: #FF2800;
 }
 
 .hero-scroll-hint {
@@ -338,10 +338,10 @@ body.light-mode .scroll-top {
 .section-title {
     font-size: 17px;
     font-weight: 600;
-    color: #e94560;
+    color: #FF2800;
     margin-bottom: 14px;
     padding-bottom: 8px;
-    border-bottom: 2px solid #e94560;
+    border-bottom: 2px solid #FF2800;
     display: inline-block;
 }
 
@@ -387,7 +387,7 @@ body.light-mode .scroll-top {
     display: block;
     font-size: 26px;
     font-weight: 700;
-    color: #e94560;
+    color: #FF2800;
 }
 
 .stat-label {
@@ -448,7 +448,7 @@ body.light-mode .scroll-top {
 .member-role {
     font-size: 11px;
     font-weight: 600;
-    color: #e94560;
+    color: #FF2800;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 6px;
@@ -651,7 +651,7 @@ body.light-mode .scroll-top {
 }
 
 .race-item.next {
-    border-color: #e94560;
+    border-color: #FF2800;
     background-color: rgba(233, 69, 96, 0.06);
 }
 
@@ -673,7 +673,7 @@ body.light-mode .scroll-top {
 }
 
 .race-date-block.highlight-date {
-    background-color: #e94560;
+    background-color: #FF2800;
 }
 
 .race-month {
@@ -728,7 +728,7 @@ body.light-mode .scroll-top {
 }
 
 .race-badge.upcoming {
-    background-color: #e94560;
+    background-color: #FF2800;
     color: white;
 }
 
@@ -755,7 +755,7 @@ body.light-mode .scroll-top {
 .cd-item span {
     font-size: 20px;
     font-weight: 700;
-    color: #e94560;
+    color: #FF2800;
     line-height: 1;
 }
 
@@ -818,7 +818,7 @@ body.light-mode .scroll-top {
 
 .best-time {
     font-weight: 600;
-    color: #e94560;
+    color: #FF2800;
 }
 
 .result-note {
@@ -842,7 +842,7 @@ body.light-mode .scroll-top {
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 14px;
-    color: #e94560;
+    color: #FF2800;
 }
 
 .summary-grid {
@@ -862,7 +862,7 @@ body.light-mode .scroll-top {
     display: block;
     font-size: 22px;
     font-weight: 700;
-    color: #e94560;
+    color: #FF2800;
 }
 
 .summary-label {
@@ -967,7 +967,7 @@ body.light-mode .scroll-top {
 }
 
 .contact-card a {
-    color: #e94560;
+    color: #FF2800;
     text-decoration: none;
 }
 
@@ -1003,7 +1003,7 @@ footer {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #e94560;
+    background-color: #FF2800;
     color: white;
     border: none;
     font-size: 18px;
